@@ -66,6 +66,10 @@ if "tmp_file_path" not in st.session_state:
             st.session_state['tmp_file_path'] = tmp_file.name
             # Rerun the app immediately to show the SQL query tool once the file has been uploaded
             st.rerun()
+    button_demo = st.button("Use demo database")
+    if button_demo:
+        st.session_state['tmp_file_path'] = "data/chinook.db"
+        st.rerun()
 
 # If the database is uploaded, show the SQL query tool
 if "tmp_file_path" in st.session_state:
