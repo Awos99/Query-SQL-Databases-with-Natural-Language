@@ -55,7 +55,7 @@ def viz_df(query):
 # Start of the app, ask the user to upload a database if not present
 if "tmp_file_path" not in st.session_state:
     # Set layout for better UI
-    st.set_page_config(layout="centered")
+    st.set_page_config(layout="centered", page_title='SQL Query with Natural Language')
     st.title("Upload Database")
     data = st.file_uploader("Upload a database", type=["db"])
     if data:
@@ -73,7 +73,7 @@ if "tmp_file_path" not in st.session_state:
 
 # If the database is uploaded, show the SQL query tool
 if "tmp_file_path" in st.session_state:
-    st.set_page_config(layout="wide")
+    st.set_page_config(layout="wide", page_title='SQL Query with Natural Language')
 
     # Initialize and use the database
     db = SQLDatabase.from_uri(f"sqlite:///{st.session_state['tmp_file_path']}")
