@@ -24,8 +24,12 @@ class SQLAgent:
         self.db = db
 
         # Load the API token from the API_TOKEN.txt file
-        path="API_TOKEN.txt"
-        os.environ["OPENAI_API_KEY"] = open(path, 'r').read()
+        
+        try:
+            path="API_TOKEN.txt"
+            os.environ["OPENAI_API_KEY"] = open(path, 'r').read()
+        except:
+            pass
 
         # Create the LLM model
         self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)

@@ -161,4 +161,4 @@ cython_debug/
 
 # databases
 *.db
-*.txt
+API_TOKEN.txt
