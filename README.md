@@ -1,6 +1,6 @@
 # Query SQL Databases with Natural Language
 
-![Demo GIF](/static/Demo Video SQL.gif)
+![Demo GIF](/static/demo.gif)
 
 ## Overview
 This repository hosts the prototype of an innovative tool designed to leverage the capabilities of an *SQL Agent* from LangChain to facilitate querying databases using natural language. This project harnesses the power of large language models (LLMs) to interpret and translate user queries into executable SQL commands.
